@@ -1,4 +1,9 @@
 public class addTwoNumbers {
+    /**
+    　　* @Description: 2. 两数相加
+    　　* @author ZichaoXie
+    　　* @date 2021/6/24 16:17
+    　　*/
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int tmp = 0;//进位
         ListNode pre = new ListNode();//通常链表的题目都会先创建一个pre节点，return pre.next;
