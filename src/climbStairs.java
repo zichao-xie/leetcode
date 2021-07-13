@@ -5,6 +5,13 @@
  *
  */
 public class climbStairs {
+
+    /**
+     * @author  ZichaoXie
+     * @date  ${DATE} ${TIME}
+     * @description:
+     */
+
     public static int climbStairs(int n) {
         if (n==1){
             return 1;
