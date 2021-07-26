@@ -1,21 +1,20 @@
 public class reverse {
+    //time 2
+
     public static int reverse(int x) {
-        //System.out.println(Math.pow(2,31)-1);
-        //System.out.println(x);
-        //if (x>Math.pow(2,31)-1||x<Math.pow(-2,31))  return 0;
-        int res=0;
+        int ret = 0;
         while (x!=0){
-            int tmp=x%10;
-            if ((res>Integer.MAX_VALUE/10)||(res==Integer.MAX_VALUE/10&&tmp>Integer.MAX_VALUE%10)){
+            int  tmp = x%10;
+            if (ret>Integer.MAX_VALUE/10||(ret==Integer.MAX_VALUE/10&&tmp>Integer.MAX_VALUE%10)){
                 return 0;
             }
-            if ((res<Integer.MIN_VALUE/10)||(res==Integer.MIN_VALUE/10&&tmp<Integer.MIN_VALUE%10)){
+            if (ret<Integer.MIN_VALUE/10||(ret==Integer.MIN_VALUE/10&&tmp<Integer.MIN_VALUE%10)){
                 return 0;
             }
-            res=res*10+tmp;
-            x=x/10;
+            ret=ret*10+tmp;
+            x/=10;
         }
-        return res;
+        return ret;
     }
 
     public static void main(String[] args) {
