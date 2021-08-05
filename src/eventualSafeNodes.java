@@ -11,7 +11,8 @@ public class eventualSafeNodes {
     /**
      * @author  ZichaoXie
      * @date  2021/8/5 下午4:58
-     * @description: 图的题,首先遍历每一个节点，然后遍历其下游节点。
+     * @description: 图的题,节点不经过环或者不在环上。
+     * 首先遍历每一个节点，然后遍历其下游节点。
      * 节点第一次访问被标记为0
      * 在栈中的节点为1
      * 安全节点为2.
