@@ -2,14 +2,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class twoSum {
+    /**
+    　　* @Description: hash,判断map里是否含有target-num[i]
+    　　* @author ZichaoXie
+    　　* @date 2021/8/6 18:35
+       * @times 2
+    　　*/
     public static int [] twoSum(int [] nums,int target){
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i=0;i<nums.length;i++){
-            int tmp = target - nums[i];
-            if (map.containsKey(tmp)){//判断当前数字与target的差是否存在，存在返回，不存在存入map
-                return new int[]{i,map.get(tmp)};//新建一个数组赋初值并返回
+        Map<Integer,Integer> map = new HashMap<>();
+        for (int  i=0;i<nums.length;i++){
+            if (map.containsKey(target-nums[i])){
+                return new int[]{map.get(target-nums[i]),i};
+            }else {
+                map.put(nums[i],i);
             }
-            map.put(nums[i],i);
         }
         return null;
     }
