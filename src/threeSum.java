@@ -1,5 +1,6 @@
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 //15.三数之和
 public class threeSum {
@@ -24,7 +25,6 @@ public class threeSum {
 
             while (left<right){
                 int sum = nums[i]+nums[left]+nums[right];
-                List list=new ArrayList();
                 if (sum == 0){
                     //aslist函数
                     lists.add(Arrays.asList(nums[i],nums[left],nums[right]));
@@ -48,12 +48,5 @@ public class threeSum {
 
     public static void main(String[] args) {
         //System.out.println(threeSum());;
-    }
-}
-
-class MyComparator implements Comparator<Integer>{
-    @Override
-    public int compare(Integer o1,Integer o2){
-        return o2-o1;
     }
 }
